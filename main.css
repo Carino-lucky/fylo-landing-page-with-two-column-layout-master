@@ -1,0 +1,53 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+.logo img {
+  height: 40px;
+}
+nav a {
+  text-decoration: none;
+  color: hsl(243, 87%, 12%);
+  padding: 10px 20px;
+}
+nav a:visited {
+  color: green;
+}
+nav a:hover {
+  background-color: lightgray;
+}
+nav a:active {
+  color: orangered;
+}
+input {
+  padding: 10px 20px;
+}
+input:focus {
+  border-color: red;
+  outline-color: red;
+}
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 10px 60px;
+}
+.hero img {
+  width: 100%;
+}
+.hero > div {
+  flex: 1;
+}
+h1 {
+  font-size: 40px;
+}
