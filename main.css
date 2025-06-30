@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -50,4 +54,90 @@ button:hover {
 }
 h1 {
   font-size: 40px;
+}
+.productive {
+  display: flex;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: hsl(240, 75%, 98%);
+}
+.productive img {
+  width: 100%;
+}
+.testimonial-card img {
+  width: 20px;
+  height: 20px;
+}
+.testimonial-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin-top: 20px;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.testimonial-author h3 {
+  margin: 0;
+}
+.testimonial-author p {
+  margin: 0;
+}
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.productive a {
+  text-decoration: underline;
+  text-decoration-color: hsl(170, 45%, 43%);
+  color: hsl(170, 45%, 43%);
+}
+.productive a:hover {
+  color: hsl(170, 45%, 43%);
+}
+.nav img {
+  max-width: fit-content;
+  min-height: fit-content;
+  float: inherit;
+}
+.nav img::after {
+  text-decoration: none;
+  max-width: max-content;
+  min-height: min-content;
+  margin-left: 50px;
+}
+.early-access {
+  background-color: hsl(238, 22%, 44%);
+  color: white;
+  padding: 30px 60px;
+  display: flex;
+  align-items: center;
+}
+.early-access > * {
+  flex: 1;
+}
+.early-access input {
+  display: block;
+  width: 70%;
+  margin-bottom: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: hsl(243, 87%, 12%);
+  color: white;
+}
+footer div:not(:last-child) a {
+  display: block;
+  color: inherit;
+  margin-top: 10px;
+  text-decoration: none;
 }
