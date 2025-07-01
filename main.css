@@ -10,6 +10,7 @@ header {
 .logo img {
   height: 40px;
 }
+
 nav a {
   text-decoration: none;
   color: hsl(243, 87%, 12%);
@@ -21,7 +22,8 @@ nav a:visited {
 nav a:hover {
   background-color: lightgray;
 }
-nav a:active {
+
+nav a.active {
   color: orangered;
 }
 input {
@@ -31,6 +33,7 @@ input:focus {
   border-color: red;
   outline-color: red;
 }
+
 button {
   background-color: blue;
   color: white;
@@ -51,23 +54,37 @@ button:hover {
 }
 .hero > div {
   flex: 1;
+  /* This makes sure that the two dive are of equal sizes always */
 }
 h1 {
-  font-size: 40px;
+  font-size: 46px;
 }
-.productive {
-  display: flex;
-  align-items: center;
-  padding: 10px 60px;
-  background-color: hsl(240, 75%, 98%);
-}
-.productive img {
+
+/* Write html and style the productive section */
+
+/* background patter between hero and productive sections */
+
+.background-pattern {
+  background-image: url("./images/bg-curve-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
   width: 100%;
 }
-.testimonial-card img {
-  width: 20px;
-  height: 20px;
+/* Productive section  */
+.productive {
+  display: flex;
+  background-color: hsl(240, 75%, 98%);
+  padding: 20px 60px;
 }
+.productive > div {
+  flex: 1;
+}
+.productive .right-side img {
+  width: 100%;
+}
+
 .testimonial-card {
   background-color: white;
   padding: 20px;
@@ -82,7 +99,6 @@ h1 {
   margin-top: 20px;
   gap: 10px;
 }
-
 .testimonial-author h3 {
   margin: 0;
 }
@@ -95,24 +111,14 @@ h1 {
   border-radius: 30px;
 }
 .productive a {
-  text-decoration: underline;
-  text-decoration-color: hsl(170, 45%, 43%);
   color: hsl(170, 45%, 43%);
+  text-underline-offset: 8px;
 }
 .productive a:hover {
-  color: hsl(170, 45%, 43%);
+  color: hsl(170, 61%, 29%);
 }
-.nav img {
-  max-width: fit-content;
-  min-height: fit-content;
-  float: inherit;
-}
-.nav img::after {
-  text-decoration: none;
-  max-width: max-content;
-  min-height: min-content;
-  margin-left: 50px;
-}
+/* Early Access Seciton */
+
 .early-access {
   background-color: hsl(238, 22%, 44%);
   color: white;
@@ -128,16 +134,99 @@ h1 {
   width: 70%;
   margin-bottom: 10px;
 }
+/* Footer */
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 40px 60px;
   background-color: hsl(243, 87%, 12%);
   color: white;
 }
+
 footer div:not(:last-child) a {
   display: block;
   color: inherit;
   margin-top: 10px;
   text-decoration: none;
+}
+footer ion-icon {
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+}
+/* Mobile Responsiveness  - Using media queries */
+/* Media queries allow us to apply different styles based on the screen size */
+
+/* all css above this line is applied to all screen sizes
+ */
+
+/* tablets */
+@media (max-width: 1200px) {
+  body {
+    background-color: aqua;
+  }
+}
+
+/* mobile devices */
+@media (max-width: 768px) {
+  body {
+    background-color: crimson;
+  }
+  header {
+    padding: 20px;
+    align-items: center;
+  }
+  header a {
+    padding: 12px;
+  }
+
+  .hero {
+    padding: 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  input {
+    display: block;
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 10px;
+  }
+  button {
+    display: block;
+    width: 80%;
+    margin: 0px auto;
+  }
+  .background-pattern {
+    background-image: url("./images/bg-curve-mobile.svg");
+  }
+  .productive {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .productive h2 {
+    text-align: center;
+  }
+  .productive .left-side > a {
+    text-align: center;
+    display: block;
+  }
+  .testimonial-card {
+    margin: 20px auto;
+  }
+
+  .early-access {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .early-access form {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
