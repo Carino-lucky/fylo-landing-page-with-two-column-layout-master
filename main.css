@@ -230,3 +230,50 @@ footer ion-icon {
     gap: 40px;
   }
 }
+
+/* animation */
+
+button {
+  animation: shake 1s linear infinite;
+}
+.hero {
+  animation: slide-in-from-left 1s linear;
+}
+.productive {
+  animation: slide-in-from-right 1s linear;
+}
+
+/* keyframes allow us to define an animation. They are used with the animation property */
+
+@keyframes slide-in-from-left {
+  0% {
+    transform: translateX(-100%);
+    background-color: aquamarine;
+  }
+  100% {
+    transform: translateX(0);
+    background-color: bisque;
+  }
+}
+@keyframes slide-in-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  90% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
